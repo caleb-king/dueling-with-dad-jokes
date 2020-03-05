@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: auto;
+  background-color: #fcfca4;
+}
+
+nav {
+  position: sticky;
+  color: white;
+}
+
+ul {
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 15px;
+  text-decoration: none;
+  border: solid 3px black;
+}
+
+.new-game-nav-link {
+  font-weight: bold;
+  background-color: #ffff00;
+  color: black;
+  border-radius: 5px;
+}
+
+header {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+header > h1 {
+  margin: 0;
+  padding: 0;
+}
+
+header > p {
+  padding: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.how-to-play {
+  color: white;
+  width: 90%;
+  margin: 0 auto;
+  background-color: black;
+  padding: 1em 2em 2em;
+}
+
+.demo-video-container {
+  margin: 3em auto 1em;
+  max-width: 1000px;
+}
+
+.demo-video {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid 5px #fcfca4;
+  border-radius: 5px;
+}
+
+.begin-duel-section {
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  background-color: #fcfca4;
+}
+
+.begin-duel {
+  padding: 1em 2em;
+  background-color: #ffff00;
+  border: solid 3px black;
+  border-radius: 5px; 
+  font-size: 20px;
+  font-weight: 600;
+}

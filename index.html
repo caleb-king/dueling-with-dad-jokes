@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dueling With Dad Jokes</title>
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="new-game-nav-link">New Game</li>
+      <li class="find-a-joke-nav-link">Find a Joke</li>
+      <li class="how-to-play-nav-link">How to Play</li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Dueling with Dad Jokes</h1>
+    <p>You laugh, you lose.</p>
+    <div class="js-display-error"></div>
+  </header>
+  <main>
+      <section class="how-to-play">
+        <h2>How to Play</h2>
+        <p>This game is a face-off between two people telling terrible dad jokes to each other. The goal is to keep yourself from laughing, while getting your opponent to crack.</p>
+        <p>You and your opponent take turns telling each other dad jokes. If one of you laughs at any point in time, the other gains a point. The first one to 10 laugh points wins.</p>
+        <p>To increase the laughter, play on a mobile device. This allows you to stand face-to-face with your opponent. This also prevents the receiver of the joke from prematurely seeing the punchline.</p>
+        <p>For further clarification as well as entertainment, I recommend watching the video below of two dads battling it out.</p>
+        <div class="demo-video-container">
+          <div class="demo-video">
+            <iframe src="https://www.youtube.com/embed/mQ7DyX7Q6C8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="begin-duel-section">
+        <button class="begin-duel">Begin Duel</button>
+      </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
