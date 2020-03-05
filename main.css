@@ -114,14 +114,16 @@ iframe:hover {
   border-radius: 5px; 
   font-size: 20px;
   font-weight: 600;
+  margin: 0.2em 0.4em;
+  transition:all 0.25s ease;
 }
 
 .begin-duel:hover {
-  background-color: black;
-  color: #ffff00;
-  border-color: #ffff00;
+  padding: 1.2em 2.4em;
   transition:all 0.25s ease;
   cursor: pointer;
+  margin: 0 0;
+  font-size: 24px;
 } 
 
 
