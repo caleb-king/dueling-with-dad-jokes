@@ -11,8 +11,12 @@ body {
 }
 
 nav {
-  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
   color: white;
+  z-index: 1;
+  border-bottom: solid 5px #fcfca4;
 }
 
 ul {
@@ -26,7 +30,6 @@ ul {
 }
 
 li {
-  float: right;
   display: block;
   color: white;
   text-align: center;
@@ -35,22 +38,58 @@ li {
   border: solid 3px black;
 }
 
+li button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  font-size: 24px;
+  color: white; 
+}
+
+.hamburger {
+  text-align: right;
+}
+
+.new-game-nav-link {
+  font-weight: bold;
+  background-color: #ffff00;
+  color: black;
+  border-radius: 5px;
+}
+
+.new-game-nav-link:hover {
+  background-color: black;
+  color: #ffff00;
+  border-color: #ffff00;
+  transition:all 0.25s ease;
+} 
+
 .new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link {
   display: none;
 }
 
-li:hover {
-  background-color: #ffff00;
-  color: black;
+li:hover, .menu-button:hover {
+  background-color: #3f3f3f;
   transition:all 0.25s ease;
   cursor: pointer;
   font-weight: bold;
 }
 
+.menu-button:focus, .menu-button:active {
+    outline: none;
+}
+
 header {
   text-align: center;
-  padding-top: 1em;
+  padding-top: 50px;
   padding-bottom: 1em;
+  transition: linear 0.15s;
+}
+
+.extra-margin {
+  margin-top: 144px;
+  transition: linear 0.15s;
 }
 
 header > h1 {
@@ -128,11 +167,6 @@ iframe:hover {
 
 
 @media (min-width: 1024px) {
-  
-  nav {
-    position: sticky;
-    color: white;
-  }
   
   ul {
     top: 0;
