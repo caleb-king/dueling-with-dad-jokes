@@ -178,6 +178,7 @@ iframe:hover {
   font-weight: 600;
   margin: 0.2em 0.4em;
   transition:all 0.25s ease;
+  text-decoration: none;
 }
 
 .begin-duel:hover {
