@@ -34,6 +34,7 @@ li {
   color: white;
   text-align: center;
   border: solid 3px black;
+  transition:all 0.25s ease;
 }
 
 li button {
@@ -52,6 +53,7 @@ nav a {
   padding: 5px 15px;
   font-weight: bold;
   width: 100%;
+  transition:all 0.25s ease;
 }
 
 nav a:visited {
@@ -66,14 +68,12 @@ nav a:visited {
 .new-game-nav-link {
   background-color: #ffff00;
   border-radius: 5px;
+  transition:all 0.25s ease;
 }
 
-.new-game-nav-link a {
+.new-game-nav-link a, .new-game-nav-link a:visited {
   color: black;
-}
-
-.new-game-nav-link a:visited {
-  color: black;
+  transition:all 0.25s ease;
 }
 
 .new-game-nav-link:hover a {
@@ -107,7 +107,10 @@ header {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 1em;
-  transition: linear 0.15s;
+  margin-top: 0;
+  transition-timing-function: linear;
+  transition: margin-top 0.15s;
+  transition-delay: 0.15s;
 }
 
 .extra-margin {
