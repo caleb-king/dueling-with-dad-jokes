@@ -33,8 +33,6 @@ li {
   display: block;
   color: white;
   text-align: center;
-  padding: 5px 15px;
-  text-decoration: none;
   border: solid 3px black;
 }
 
@@ -47,15 +45,40 @@ li button {
   color: white; 
 }
 
+nav a {
+  text-decoration: none;
+  color: white;
+  display:inline-block;
+  padding: 5px 15px;
+  font-weight: bold;
+  width: 100%;
+}
+
+nav a:visited {
+  color: white;
+}
+
 .hamburger {
   text-align: right;
+  padding: 5px 15px;
 }
 
 .new-game-nav-link {
-  font-weight: bold;
   background-color: #ffff00;
-  color: black;
   border-radius: 5px;
+}
+
+.new-game-nav-link a {
+  color: black;
+}
+
+.new-game-nav-link a:visited {
+  color: black;
+}
+
+.new-game-nav-link:hover a {
+  color:#ffff00;
+  transition:all 0.25s ease;
 }
 
 .new-game-nav-link:hover {
@@ -166,7 +189,7 @@ iframe:hover {
 } 
 
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   
   ul {
     top: 0;
@@ -187,7 +210,6 @@ iframe:hover {
     display: block;
     color: white;
     text-align: center;
-    padding: 5px 15px;
     text-decoration: none;
     border: solid 3px black;
   }

@@ -3,7 +3,6 @@ import STORE from './STORE.js';
 const handleMenuButtonClicked = function() {
   $('.hamburger').click(function() {
     STORE.menuExpanded = !STORE.menuExpanded;
-    console.log(STORE.menuExpanded);
     if (STORE.menuExpanded) {
       $('.new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link').slideDown(150);
       $('header').addClass('extra-margin');
