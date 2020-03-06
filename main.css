@@ -19,7 +19,7 @@ nav {
   border-bottom: solid 5px #ffffbf;
 }
 
-ul {
+nav ul {
   top: 0;
   width: 100%;
   list-style-type: none;
@@ -29,7 +29,7 @@ ul {
   background-color: black;
 }
 
-li {
+nav li {
   display: block;
   color: white;
   text-align: center;
@@ -37,7 +37,7 @@ li {
   transition:all 0.25s ease;
 }
 
-li button {
+nav li button {
   background: transparent;
   box-shadow: 0px 0px 0px transparent;
   border: 0px solid transparent;
@@ -93,7 +93,7 @@ nav a:visited {
   display: none;
 }
 
-li:hover, .menu-button:hover {
+nav li:hover, .menu-button:hover {
   background-color: #3f3f3f;
   transition:all 0.25s ease;
   cursor: pointer;
@@ -139,7 +139,7 @@ header > p {
   padding: 1em 2em 2em;
 }
 
-.joke-container, .winner {
+.joke-container, .winner, .directions-container {
   color: white;
   background-color: black;
   text-align: center;
@@ -205,6 +205,55 @@ iframe:hover {
   font-size: 24px;
 } 
 
+.directions-container h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 48px;
+}
+
+.toggle-directions {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-decoration: underline;
+  transition:all 0.1s ease;
+}
+
+.toggle-directions:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.toggle-directions:active, .toggle-directions:focus {
+  outline: none;
+}
+
+.directions, .joke {
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 3px white;
+  border-radius: 5px;
+  padding: 1em 1.2em 1em 2.5em;
+}
+
+.directions-container em {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #ffff00;
+  font-style: normal;
+}
+
+.joke {
+  text-align: left;
+}
+
+.joke-container h2 {
+  margin-top: 0;
+}
+
 .score-container {
   display: flex;
   flex-direction: row;
@@ -216,7 +265,7 @@ iframe:hover {
   margin: 0 auto;
 }
 
-.how-to-play, .joke-container, .score-container, .winner {
+.how-to-play, .joke-container, .score-container, .winner, .directions-container {
   max-width: 1054px;
 }
 
@@ -333,7 +382,7 @@ hr {
 
 @media (min-width: 768px) {
   
-  ul {
+  nav ul {
     top: 0;
     width: 100%;
     list-style-type: none;
@@ -347,7 +396,7 @@ hr {
     display: block;
   }
   
-  li {
+  nav li {
     float: right;
     display: block;
     color: white;

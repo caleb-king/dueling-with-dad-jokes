@@ -1,4 +1,5 @@
 import STORE from './STORE.js';
+import api from './api.js';
 
 const handleMenuButtonClicked = function() {
   $('.hamburger').click(function() {
@@ -24,6 +25,24 @@ const renderMenuOnResize = function() {
   }
 };
 
+const handleToggleDirectionsButtonClicked = function() {
+  $('.toggle-directions').click(function() {
+    $('.directions').slideToggle(250);
+    if ($('.toggle-directions').text() === 'hide') {
+      $('.toggle-directions').text('show');
+    } else {
+      $('.toggle-directions').text('hide');
+    }
+  });
+};
+
+const renderRandomJoke = function() {
+  api.getRandomJoke()
+    .then((randomJoke) => {
+      $('.joke').text(randomJoke.joke);
+    });
+};
+
 const handleNewJokeButtonClicked = function() {
   $('.new-joke-bttn').click(function() {
     if ($('.winner').css('display') === 'block') {
@@ -31,8 +50,8 @@ const handleNewJokeButtonClicked = function() {
       $('.player-1-score-container').removeClass('winner-decor');
       $('.player-2-score-container').removeClass('winner-decor');
     }
+    renderRandomJoke();
   });
-  
 };
 
 const displayWinner = function() {
@@ -97,6 +116,7 @@ const handleMinusPlayer2Clicked = function() {
 
 const bindEventHandlers = function() {
   handleMenuButtonClicked();
+  handleToggleDirectionsButtonClicked();
   handleNewJokeButtonClicked();
   handlePlusPlayer1Clicked();
   handlePlusPlayer2Clicked();
@@ -107,6 +127,9 @@ const bindEventHandlers = function() {
 const main = function() {
   $(window).resize(renderMenuOnResize);
   bindEventHandlers();
+  if(window.location.pathname === '/game.html') {
+    renderRandomJoke();
+  }
 };
 
 $(main);
