@@ -100,7 +100,7 @@ li:hover, .menu-button:hover {
   font-weight: bold;
 }
 
-.menu-button:focus, .menu-button:active {
+.menu-button:focus, .menu-button:active, .new-joke-bttn:focus, .new-joke-bttn:active {
     outline: none;
 }
 
@@ -139,12 +139,16 @@ header > p {
   padding: 1em 2em 2em;
 }
 
-.joke-container {
+.joke-container, .winner {
   color: white;
   background-color: black;
   text-align: center;
   padding: 1em;
   margin: 0 auto;
+}
+
+.winner {
+  display: none;
 }
 
 .demo-video-container {
@@ -212,34 +216,39 @@ iframe:hover {
   margin: 0 auto;
 }
 
-.how-to-play, .joke-container, .score-container {
+.how-to-play, .joke-container, .score-container, .winner {
   max-width: 1054px;
 }
 
-.score-container i {
+.score-container .add-score {
   display: block;
 }
 
-.player-1-score, .player-2-score {
+.player-1-score-container, .player-2-score-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1em;
   width: 45%;
+  border-top: solid black 5px;
   border-bottom: solid black 5px;
   max-width: 200px;
 }
 
-.player-1-score {
+.player-1-score-container {
   border-left: solid black 5px;
   border-right: solid black 2.5px;
   background-color: #cfcfcf;
 }
 
-.player-2-score {
+.player-2-score-container {
   border-left: solid black 2.5px;
   border-right: solid black 5px;
   background-color: #ffffbf;
+}
+
+.winner-decor {
+  border: solid 5px #ffff00;
 }
 
 hr {
@@ -256,17 +265,25 @@ hr {
 }
 
 .score-container p {
+  font-size: .8em;
+}
+
+.score-container .player-1-score, .score-container .player-2-score {
   font-size: 3em;
   font-weight: bold;
   line-height: 1em;
 }
 
 .undo {
-  padding-left: 80px;
   margin-top: 5px;
 }
 
+.undo-container {
+  padding-left: 80px;
+}
+
 .add-score {
+  display: block;
   color: #003d00;
   border: solid 8px #003d00;
   border-radius: 50px;
@@ -277,35 +294,35 @@ hr {
   transition: all 0.25s ease;
 }
 
-.player-1-score hr {
+.player-1-score-container hr {
   color: #ffffbf;
 }
 
-.player-2-score hr {
+.player-2-score-container hr {
   color: #cfcfcf;
 }
 
-.player-1-score .add-score {
+.player-1-score-container .add-score {
   background-color: #ffffbf;
   transition: all 0.25s ease;
 }
 
-.player-2-score .add-score {
+.player-2-score-container .add-score {
   background-color: #cfcfcf;
   transition: all 0.25s ease;
 }
 
-.player-1-score .add-score:hover {
+.plus-player-1:hover {
   cursor: pointer;
-  color: #cfcfcf;
-  background-color: #003d00;
+  border-color: black;
+  background-color: #cfcfcf;
   transition: all 0.25s ease;
 }
 
-.add-score:hover {
+.plus-player-2:hover {
   cursor: pointer;
-  color: #ffffbf;
-  background-color: #003d00;
+  border-color: black;
+  background-color: #ffffbf;
   transition: all 0.25s ease;
 }
 
