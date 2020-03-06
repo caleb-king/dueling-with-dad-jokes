@@ -7,7 +7,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   margin: auto;
-  background-color: #fcfca4;
+  background-color: #ffffbf;
 }
 
 nav {
@@ -16,7 +16,7 @@ nav {
   width: 100%;
   color: white;
   z-index: 1;
-  border-bottom: solid 5px #fcfca4;
+  border-bottom: solid 5px #ffffbf;
 }
 
 ul {
@@ -81,11 +81,12 @@ nav a:visited {
   transition:all 0.25s ease;
 }
 
-.new-game-nav-link:hover {
+.new-game-nav-link:hover, .new-joke-bttn:hover {
   background-color: black;
   color: #ffff00;
   border-color: #ffff00;
   transition:all 0.25s ease;
+  cursor: pointer;
 } 
 
 .new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link {
@@ -138,6 +139,14 @@ header > p {
   padding: 1em 2em 2em;
 }
 
+.joke-container {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 1em;
+  margin: 0 auto;
+}
+
 .demo-video-container {
   margin: 3em auto 1em;
   max-width: 1000px;
@@ -168,10 +177,10 @@ iframe:hover {
   padding: 3em;
   display: flex;
   justify-content: center;
-  background-color: #fcfca4;
+  background-color: #ffffbf;
 }
 
-.begin-duel {
+.begin-duel, .new-joke-bttn {
   padding: 1em 2em;
   background-color: #ffff00;
   border: solid 3px black;
@@ -192,6 +201,118 @@ iframe:hover {
   font-size: 24px;
 } 
 
+.score-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  background-color: black;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  margin: 0 auto;
+}
+
+.how-to-play, .joke-container, .score-container {
+  max-width: 1054px;
+}
+
+.score-container i {
+  display: block;
+}
+
+.player-1-score, .player-2-score {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+  width: 45%;
+  border-bottom: solid black 5px;
+  max-width: 200px;
+}
+
+.player-1-score {
+  border-left: solid black 5px;
+  border-right: solid black 2.5px;
+  background-color: #cfcfcf;
+}
+
+.player-2-score {
+  border-left: solid black 2.5px;
+  border-right: solid black 5px;
+  background-color: #ffffbf;
+}
+
+hr {
+  width: 100px;
+  border: 2px solid;
+}
+
+.score-container h2, .score-container p {
+  margin: 0;
+}
+
+.score-container h2 {
+  font-size: 1.3em;
+}
+
+.score-container p {
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.undo {
+  padding-left: 80px;
+  margin-top: 5px;
+}
+
+.add-score {
+  color: #003d00;
+  border: solid 8px #003d00;
+  border-radius: 50px;
+  width: 72px;
+  padding: 8px;
+  margin-top: 8px;
+  align-self: center;
+  transition: all 0.25s ease;
+}
+
+.player-1-score hr {
+  color: #ffffbf;
+}
+
+.player-2-score hr {
+  color: #cfcfcf;
+}
+
+.player-1-score .add-score {
+  background-color: #ffffbf;
+  transition: all 0.25s ease;
+}
+
+.player-2-score .add-score {
+  background-color: #cfcfcf;
+  transition: all 0.25s ease;
+}
+
+.player-1-score .add-score:hover {
+  cursor: pointer;
+  color: #cfcfcf;
+  background-color: #003d00;
+  transition: all 0.25s ease;
+}
+
+.add-score:hover {
+  cursor: pointer;
+  color: #ffffbf;
+  background-color: #003d00;
+  transition: all 0.25s ease;
+}
+
+.undo:hover {
+  cursor: pointer;
+  color: #c4302b;
+}
 
 @media (min-width: 768px) {
   
