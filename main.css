@@ -81,7 +81,7 @@ nav a:visited {
   transition:all 0.25s ease;
 }
 
-.new-game-nav-link:hover, .new-joke-bttn:hover {
+.new-game-nav-link:hover, .new-joke-button:hover, .find-jokes-button:hover {
   background-color: black;
   color: #ffff00;
   border-color: #ffff00;
@@ -89,7 +89,7 @@ nav a:visited {
   cursor: pointer;
 } 
 
-.new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link {
+.new-game-nav-link, .find-jokes-nav-link, .how-to-play-nav-link {
   display: none;
 }
 
@@ -100,7 +100,7 @@ nav li:hover, .menu-button:hover {
   font-weight: bold;
 }
 
-.menu-button:focus, .menu-button:active, .new-joke-bttn:focus, .new-joke-bttn:active {
+.menu-button:focus, .menu-button:active, .new-joke-button:focus, .new-joke-button:active, .find-jokes-button:focus, .find-jokes-button:active {
     outline: none;
 }
 
@@ -139,7 +139,7 @@ header > p {
   padding: 1em 2em 2em;
 }
 
-.joke-container, .winner, .directions-container {
+.joke-container, .winner, .directions-container, .find-jokes {
   color: white;
   background-color: black;
   text-align: center;
@@ -184,7 +184,7 @@ iframe:hover {
   background-color: #ffffbf;
 }
 
-.begin-duel, .new-joke-bttn {
+.begin-duel, .new-joke-button, .find-jokes-button {
   padding: 1em 2em;
   background-color: #ffff00;
   border: solid 3px black;
@@ -265,7 +265,7 @@ iframe:hover {
   margin: 0 auto;
 }
 
-.how-to-play, .joke-container, .score-container, .winner, .directions-container {
+.how-to-play, .joke-container, .score-container, .winner, .directions-container, .find-jokes {
   max-width: 1054px;
 }
 
@@ -380,6 +380,21 @@ hr {
   color: #c4302b;
 }
 
+.find-jokes input {
+  margin-bottom: 2em;
+  min-width: 200px;
+  width: 40%;
+  padding: 0.5em;
+  border: solid #3f3f3f 3px;
+  border-radius: 5px;
+  font-family: FontAwesome;
+  font-size: 1.2em;
+}
+
+.find-jokes input:focus {
+  outline: solid 1px yellow;
+}
+
 @media (min-width: 768px) {
   
   nav ul {
@@ -392,7 +407,7 @@ hr {
     background-color: black;
   }
 
-  .new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link {
+  .new-game-nav-link, .find-jokes-nav-link, .how-to-play-nav-link {
     display: block;
   }
   

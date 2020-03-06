@@ -5,10 +5,10 @@ const handleMenuButtonClicked = function() {
   $('.hamburger').click(function() {
     STORE.menuExpanded = !STORE.menuExpanded;
     if (STORE.menuExpanded) {
-      $('.new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link').slideDown(150);
+      $('.new-game-nav-link, .find-jokes-nav-link, .how-to-play-nav-link').slideDown(150);
       $('header').addClass('extra-margin');
     } else {
-      $('.new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link').slideUp(150);
+      $('.new-game-nav-link, .find-jokes-nav-link, .how-to-play-nav-link').slideUp(150);
       $('header').removeClass('extra-margin');
     }
   });
@@ -16,12 +16,12 @@ const handleMenuButtonClicked = function() {
 
 const renderMenuOnResize = function() {
   if ($('.hamburger').css('display') === 'none'){
-    $('.new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link').show();
+    $('.new-game-nav-link, .find-jokes-nav-link, .how-to-play-nav-link').show();
     $('header').removeClass('extra-margin');
     STORE.menuExpanded = false;
   }
   if ($('.hamburger').css('display') === 'block' && STORE.menuExpanded === false) {
-    $('.new-game-nav-link, .find-a-joke-nav-link, .how-to-play-nav-link').hide();
+    $('.new-game-nav-link, .find-jokes-nav-link, .how-to-play-nav-link').hide();
   }
 };
 
@@ -44,7 +44,7 @@ const renderRandomJoke = function() {
 };
 
 const handleNewJokeButtonClicked = function() {
-  $('.new-joke-bttn').click(function() {
+  $('.new-joke-button').click(function() {
     if ($('.winner').css('display') === 'block') {
       $('.winner').hide();
       $('.player-1-score-container').removeClass('winner-decor');
@@ -114,6 +114,25 @@ const handleMinusPlayer2Clicked = function() {
   });
 };
 
+const handleFindJokesSubmitted = function() {
+  $('#find-jokes-form').submit(function(event) {
+    event.preventDefault();
+    let searchQuery = $('#search-field-input').val();
+    api.searchDadJokes(searchQuery)
+      .then((jokes) => {
+        let jokeResultsHTML = '';
+        jokes.results.forEach(result => {
+          jokeResultsHTML += `
+            <p class="joke">${result.joke}</p>`;
+        });
+        if (jokeResultsHTML === '') {
+          jokeResultsHTML = 'No results found';
+        }
+        $('.joke-search-results').html(jokeResultsHTML);
+      });
+  });
+};
+
 const bindEventHandlers = function() {
   handleMenuButtonClicked();
   handleToggleDirectionsButtonClicked();
@@ -122,6 +141,7 @@ const bindEventHandlers = function() {
   handlePlusPlayer2Clicked();
   handleMinusPlayer1Clicked();
   handleMinusPlayer2Clicked();
+  handleFindJokesSubmitted();
 };
 
 const main = function() {
@@ -129,7 +149,7 @@ const main = function() {
   bindEventHandlers();
   if(window.location.pathname === '/game.html') {
     renderRandomJoke();
-  }
+  }  
 };
 
 $(main);

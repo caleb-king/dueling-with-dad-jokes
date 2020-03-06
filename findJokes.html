@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find a Dad Jokes</title>
+  <title>Find Dad Jokes</title>
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://kit.fontawesome.com/45b10146f4.js" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
     <ul>
       <li class="hamburger"><button class="menu-button"><i class="fas fa-bars"></i></button></i></li>
       <li class="new-game-nav-link"><a href="game.html">New Game</a></li>
-      <li class="find-a-joke-nav-link"><a href="findAJoke.html">Find a Joke</a></li>
+      <li class="find-jokes-nav-link"><a href="findJokes.html">Find Jokes</a></li>
       <li class="how-to-play-nav-link"><a href="index.html">How to Play</a></li>
     </ul>
   </nav>
@@ -23,8 +23,31 @@
     <div class="js-display-error"></div>
   </header>
   <main>
-      <section class="find-a-joke">
-        <h2>Find a Joke</h2>
+      <section class="find-jokes">
+        <form id="find-jokes-form">
+          <div>
+            <!-- <label for="select-type">Enter search query below</label> -->
+            <input 
+              placeholder="&#xF002; (e.g. cat)" 
+              form="find-jokes-form" 
+              type="text" 
+              id="search-field-input">
+            </input>
+          </div>
+          <div id="find-jokes-button-container">
+            <button 
+              type="submit" 
+              form="find-jokes-form"
+              class="find-jokes-button">
+              Find Jokes
+            </button>
+          </div>
+        </form>
+      </section>
+      <section class="joke-container">
+        <h2>Dad Jokes</h2>
+        <div class="joke-search-results">
+        </div>
       </section>
   </main>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

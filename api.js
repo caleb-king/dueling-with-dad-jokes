@@ -54,14 +54,11 @@ const getRandomJoke = function () {
 };
 
 const searchDadJokes = function (searchTerm) {
-  return dadJokeApiFetch(`${BASE_URL}/search`, {
+  return dadJokeApiFetch(`${BASE_URL}/search?term=${searchTerm}&limit=5`, {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
       'User-Agent': 'My Library (https://github.com/caleb-king/dueling-with-dad-jokes)',
-    },
-    params: {
-      'term': searchTerm
     }
   });
 };
