@@ -264,6 +264,13 @@ iframe:active {
   margin-top: 0;
 }
 
+.joke-container hr {
+  width: 80%;
+  border: 1px solid white;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 .score-container {
   display: flex;
   flex-direction: row;
@@ -280,6 +287,10 @@ iframe:active {
 
 .score-container .add-score {
   display: block;
+}
+
+.score-container hr {
+  visibility: hidden;
 }
 
 .player-1-score-container, .player-2-score-container {
@@ -344,14 +355,6 @@ iframe:active {
   padding: 8px;
   align-self: center;
   transition: all 0.25s ease;
-}
-
-.player-1-score-container hr {
-  color: #ffffbf;
-}
-
-.player-2-score-container hr {
-  color: #cfcfcf;
 }
 
 .player-1-score-container .add-score {
@@ -474,6 +477,14 @@ iframe:active {
 
   .player-1-score-container h2, .player-2-score-container h2 {
     border: none;
+  }
+
+  .player-1-score-container hr {
+    color: #ffffbf;
+  }
+  
+  .player-2-score-container hr {
+    color: #cfcfcf;
   }
   
   .new-joke-button {

@@ -123,6 +123,7 @@ const handleFindJokesSubmitted = function() {
         let jokeResultsHTML = '';
         jokes.results.forEach(result => {
           jokeResultsHTML += `
+            <hr>
             <p class="joke">${result.joke}</p>`;
         });
         if (jokeResultsHTML === '') {
