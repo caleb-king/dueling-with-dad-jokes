@@ -76,12 +76,14 @@ nav a:visited {
   transition:all 0.25s ease;
 }
 
-.new-game-nav-link:hover a {
+.new-game-nav-link:active a {
   color:#ffff00;
   transition:all 0.25s ease;
 }
 
-.new-game-nav-link:hover, .new-joke-button:hover, .find-jokes-button:hover {
+.new-game-nav-link:active, 
+.new-joke-button:active, 
+.find-jokes-button:active {
   background-color: black;
   color: #ffff00;
   border-color: #ffff00;
@@ -93,7 +95,8 @@ nav a:visited {
   display: none;
 }
 
-nav li:hover, .menu-button:hover {
+nav li:active, 
+.menu-button:active {
   background-color: #3f3f3f;
   transition:all 0.25s ease;
   cursor: pointer;
@@ -172,7 +175,7 @@ iframe {
   transition:all 0.25s ease;
 }
 
-iframe:hover {
+iframe:active {
   border-color: #c4302b;
   transition:all 0.25s ease;
 }
@@ -197,7 +200,7 @@ iframe:hover {
   text-decoration: none;
 }
 
-.begin-duel:hover {
+.begin-duel:active {
   padding: 1.2em 2.4em;
   transition:all 0.25s ease;
   cursor: pointer;
@@ -220,7 +223,7 @@ iframe:hover {
   transition:all 0.1s ease;
 }
 
-.toggle-directions:hover {
+.toggle-directions:active {
   cursor: pointer;
   transform: scale(1.1);
 }
@@ -361,21 +364,21 @@ hr {
   transition: all 0.25s ease;
 }
 
-.plus-player-1:hover {
+.plus-player-1:active {
   cursor: pointer;
   border-color: black;
   background-color: #cfcfcf;
   transition: all 0.25s ease;
 }
 
-.plus-player-2:hover {
+.plus-player-2:active {
   cursor: pointer;
   border-color: black;
   background-color: #ffffbf;
   transition: all 0.25s ease;
 }
 
-.undo:hover {
+.undo:active {
   cursor: pointer;
   color: #c4302b;
 }
@@ -436,5 +439,71 @@ hr {
 
   .hamburger {
     display: none;
+  }
+
+  nav li:hover, 
+  .menu-button:hover {
+    background-color: #3f3f3f;
+    transition:all 0.25s ease;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .new-game-nav-link:hover a {
+    color:#ffff00;
+    transition:all 0.25s ease;
+  }
+  
+  .new-game-nav-link:hover, 
+  .new-joke-button:hover, 
+  .find-jokes-button:hover {
+    background-color: black;
+    color: #ffff00;
+    border-color: #ffff00;
+    transition:all 0.25s ease;
+    cursor: pointer;
+  } 
+
+  nav li:hover, 
+  .menu-button:hover {
+    background-color: #3f3f3f;
+    transition:all 0.25s ease;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  iframe:hover {
+    border-color: #c4302b;
+    transition:all 0.25s ease;
+  }
+
+  .begin-duel:hover {
+    padding: 1.2em 2.4em;
+    transition:all 0.25s ease;
+    cursor: pointer;
+    margin: 0 0;
+    font-size: 24px;
+  } 
+
+  .toggle-directions:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  .plus-player-2:hover {
+    cursor: pointer;
+    border-color: black;
+    background-color: #ffffbf;
+    transition: all 0.25s ease;
+  }
+  
+  .undo:hover {
+    cursor: pointer;
+    color: #c4302b;
+  }
+
+  .undo:hover {
+    cursor: pointer;
+    color: #c4302b;
   }
 }
