@@ -78,7 +78,7 @@ const handlePlusPlayer1Clicked = function() {
     p1Score = parseInt(p1Score, 10) + 1;
     $('.player-1-score').text(p1Score);
 
-    if (p1Score === 10 && !STORE.winner) {
+    if (p1Score === 7 && !STORE.winner) {
       STORE.winner = 'Player 1';
       displayWinner();
     }
@@ -91,7 +91,7 @@ const handlePlusPlayer2Clicked = function() {
     p2Score = parseInt(p2Score, 10) + 1;
     $('.player-2-score').text(p2Score);
     
-    if (p2Score === 10 && !STORE.winner) {
+    if (p2Score === 7 && !STORE.winner) {
       STORE.winner = 'Player 2';
       displayWinner();
     }
