@@ -285,6 +285,11 @@ iframe:active {
   max-width: 1054px;
 }
 
+.joke-search-results .joke {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
 .score-container .add-score {
   display: block;
 }
@@ -481,10 +486,12 @@ iframe:active {
 
   .player-1-score-container hr {
     color: #ffffbf;
+    visibility: visible;
   }
   
   .player-2-score-container hr {
     color: #cfcfcf;
+    visibility: visible;
   }
   
   .new-joke-button {
@@ -494,6 +501,12 @@ iframe:active {
     font-weight: 600;
     margin: 0.2em 0.4em;
   }
+
+  .joke-search-results hr {
+    display: none;
+  }
+
+
 
   nav li:hover, 
   .menu-button:hover {
@@ -548,6 +561,13 @@ iframe:active {
     cursor: pointer;
     border-color: black;
     background-color: #ffffbf;
+    transition: all 0.25s ease;
+  }
+
+  .plus-player-1:hover {
+    cursor: pointer;
+    border-color: black;
+    background-color: #cfcfcf;
     transition: all 0.25s ease;
   }
   
