@@ -404,7 +404,7 @@ iframe:active {
 .find-jokes input {
   margin-bottom: 2em;
   min-width: 200px;
-  width: 40%;
+  width: 80%;
   padding: 0.5em;
   border: solid #3f3f3f 3px;
   border-radius: 5px;
@@ -506,7 +506,9 @@ iframe:active {
     display: none;
   }
 
-
+  .find-jokes input {
+    width: 40%;
+  }
 
   nav li:hover, 
   .menu-button:hover {
