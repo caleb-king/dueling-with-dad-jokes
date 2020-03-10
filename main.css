@@ -83,7 +83,8 @@ nav a:visited {
 
 .new-game-nav-link:active, 
 .new-joke-button:active, 
-.find-jokes-button:active {
+.find-jokes-button:active,
+.begin-duel:active {
   background-color: black;
   color: #ffff00;
   border-color: #ffff00;
@@ -103,7 +104,14 @@ nav li:active,
   font-weight: bold;
 }
 
-.menu-button:focus, .menu-button:active, .new-joke-button:focus, .new-joke-button:active, .find-jokes-button:focus, .find-jokes-button:active {
+.menu-button:focus, 
+.menu-button:active, 
+.new-joke-button:focus, 
+.new-joke-button:active, 
+.find-jokes-button:focus, 
+.find-jokes-button:active,
+.begin-duel:focus,
+.begin-duel:active {
     outline: none;
 }
 
@@ -184,7 +192,11 @@ iframe:active {
   padding: 3em;
   display: flex;
   justify-content: center;
-  background-color: #ffffbf;
+  width: 90%;
+  margin: 0 auto;
+  background-color: black;
+  padding: 1em 2em 2em;
+  margin-bottom: 3em;
 }
 
 .begin-duel, .new-joke-button, .find-jokes-button {
@@ -199,14 +211,6 @@ iframe:active {
   transition:all 0.25s ease;
   text-decoration: none;
 }
-
-.begin-duel:active {
-  padding: 1.2em 2.4em;
-  transition:all 0.25s ease;
-  cursor: pointer;
-  margin: 0 0;
-  font-size: 24px;
-} 
 
 .directions-container h2 {
   text-align: center;
@@ -281,7 +285,7 @@ iframe:active {
   margin: 0 auto;
 }
 
-.how-to-play, .joke-container, .score-container, .winner, .directions-container, .find-jokes {
+.how-to-play, .joke-container, .score-container, .winner, .directions-container, .find-jokes, .begin-duel-section {
   max-width: 1054px;
 }
 
@@ -453,6 +457,7 @@ iframe:active {
     color: #ffff00;
     border-color: #ffff00;
     transition:all 0.25s ease;
+    cursor: pointer;
   } 
 
   .joke {
@@ -494,7 +499,7 @@ iframe:active {
     visibility: visible;
   }
   
-  .new-joke-button {
+  .new-joke-button, .begin-duel {
     padding: 1em 2em;
     border-radius: 5px; 
     font-size: 20px;
@@ -521,11 +526,13 @@ iframe:active {
   .new-game-nav-link:hover a {
     color:#ffff00;
     transition:all 0.25s ease;
+    cursor: pointer;
   }
   
   .new-game-nav-link:hover, 
   .new-joke-button:hover, 
-  .find-jokes-button:hover {
+  .find-jokes-button:hover,
+  .begin-duel:hover {
     background-color: black;
     color: #ffff00;
     border-color: #ffff00;
@@ -544,15 +551,8 @@ iframe:active {
   iframe:hover {
     border-color: #c4302b;
     transition:all 0.25s ease;
-  }
-
-  .begin-duel:hover {
-    padding: 1.2em 2.4em;
-    transition:all 0.25s ease;
     cursor: pointer;
-    margin: 0 0;
-    font-size: 24px;
-  } 
+  }
 
   .toggle-directions:hover {
     cursor: pointer;
