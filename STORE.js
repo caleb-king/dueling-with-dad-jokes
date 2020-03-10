@@ -9,5 +9,6 @@ const setError = function (err) {
 export default {
   menuExpanded,
   winner,
-  error
+  error,
+  setError
 };

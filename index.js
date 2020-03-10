@@ -182,6 +182,7 @@ const bindEventHandlers = function() {
   handleMinusPlayer1Clicked();
   handleMinusPlayer2Clicked();
   handleFindJokesSubmitted();
+  handleCloseError();
 };
 
 const main = function() {
