@@ -417,6 +417,18 @@ iframe:active {
   outline: solid 1px yellow;
 }
 
+.cancel:hover, #cancel-error:hover {
+  border-color: #c4302b;
+}
+
+#cancel-error {
+  color: #c4302b;
+  font-size: 24px;
+  float:right;
+  padding: 5px 10px;
+  margin: 5px 10px;
+}
+
 @media (min-width: 768px) {
   
   nav ul {

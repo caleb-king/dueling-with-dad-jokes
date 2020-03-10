@@ -25,6 +25,29 @@ const renderMenuOnResize = function() {
   }
 };
 
+const generateError = function () {
+  return `
+    <button id="cancel-error">X</button>
+    <h3>Oops, there seems to be a slight problem.</h3>
+    <p>${STORE.error}</p>`;
+};
+
+const renderError = function() {
+  if (STORE.error) {
+    const errorHTML = generateError();
+    $('.js-display-error').html(errorHTML);
+  } else {
+    $('.js-display-error').empty();
+  }
+};
+
+const handleCloseError = function () {
+  $('.js-display-error').on('click', '#cancel-error', () => {
+    STORE.setError(null);
+    renderError();
+  });
+};
+
 const handleToggleDirectionsButtonClicked = function() {
   $('.toggle-directions').click(function() {
     $('.directions').slideToggle(250);
@@ -40,6 +63,10 @@ const renderRandomJoke = function() {
   api.getRandomJoke()
     .then((randomJoke) => {
       $('.joke').text(randomJoke.joke);
+    })
+    .catch((err) => {
+      STORE.setError(err.message);
+      renderError();
     });
 };
 
@@ -114,24 +141,34 @@ const handleMinusPlayer2Clicked = function() {
   });
 };
 
+const generateJokeSearchResults = function(jokes) {
+  let jokeResultsHTML = '';
+  jokes.results.forEach(result => {
+    jokeResultsHTML += `
+      <hr>
+      <p class="joke">${result.joke}</p>`;
+  });
+  if (jokeResultsHTML === '') {
+    jokeResultsHTML = `
+      <hr>
+      <p>No results found</p>`;
+  }
+  return jokeResultsHTML;
+};
+
 const handleFindJokesSubmitted = function() {
   $('#find-jokes-form').submit(function(event) {
     event.preventDefault();
     let searchQuery = $('#search-field-input').val();
     api.searchDadJokes(searchQuery)
       .then((jokes) => {
-        let jokeResultsHTML = '';
-        jokes.results.forEach(result => {
-          jokeResultsHTML += `
-            <hr>
-            <p class="joke">${result.joke}</p>`;
-        });
-        if (jokeResultsHTML === '') {
-          jokeResultsHTML = `
-            <hr>
-            <p>No results found</p>`;
-        }
+        let jokeResultsHTML = generateJokeSearchResults(jokes);
+        //render joke search results
         $('.joke-search-results').html(jokeResultsHTML);
+      })
+      .catch((err) => {
+        STORE.setError(err.message);
+        renderError();
       });
   });
 };
