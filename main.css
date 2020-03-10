@@ -123,6 +123,7 @@ header {
   transition-timing-function: linear;
   transition: margin-top 0.15s;
   transition-delay: 0.15s;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .extra-margin {
@@ -206,7 +207,7 @@ iframe:active {
   color: black;
   border-radius: 5px; 
   font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
   margin: 0.1em 0.2em;
   transition:all 0.25s ease;
   text-decoration: none;
@@ -496,11 +497,11 @@ iframe:active {
     visibility: visible;
   }
   
-  .new-joke-button, .begin-duel {
+  .new-joke-button, .begin-duel, .find-jokes-button {
     padding: 1em 2em;
     border-radius: 5px; 
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     margin: 0.2em 0.4em;
   }
 

@@ -127,7 +127,9 @@ const handleFindJokesSubmitted = function() {
             <p class="joke">${result.joke}</p>`;
         });
         if (jokeResultsHTML === '') {
-          jokeResultsHTML = 'No results found';
+          jokeResultsHTML = `
+            <hr>
+            <p>No results found</p>`;
         }
         $('.joke-search-results').html(jokeResultsHTML);
       });

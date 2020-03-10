@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find Dad Jokes</title>
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Permanent+Marker" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <script src="https://kit.fontawesome.com/45b10146f4.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav>
     <ul>
-      <li class="hamburger"><button class="menu-button"><i class="fas fa-bars"></i></button></i></li>
+      <li class="hamburger"><button class="menu-button" aria-label="Open the menu"><i class="fas fa-bars" aria-hidden="true"></i></button></i></li>
       <li class="new-game-nav-link"><a href="game.html">New Game</a></li>
       <li class="find-jokes-nav-link"><a href="findJokes.html">Find Jokes</a></li>
       <li class="how-to-play-nav-link"><a href="index.html">How to Play</a></li>
@@ -26,11 +30,11 @@
       <section class="find-jokes">
         <form id="find-jokes-form">
           <div>
-            <!-- <label for="select-type">Enter search query below</label> -->
             <input 
               placeholder="&#xF002; (e.g. cat)" 
               form="find-jokes-form" 
               type="text" 
+              aria-label="search query"
               id="search-field-input">
             </input>
           </div>
