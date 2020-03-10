@@ -238,7 +238,6 @@ iframe:active {
 
 .directions, .joke {
   text-align: left;
-  max-width: 500px;
 }
 
 .directions {
@@ -247,9 +246,6 @@ iframe:active {
   border: solid 3px white;
   border-radius: 5px;
   padding: 1em 1.2em 1em 2.5em;
-}
-
-.joke {
   max-width: 500px;
 }
 
@@ -466,6 +462,7 @@ iframe:active {
     border: solid 3px white;
     border-radius: 5px;
     padding: 1em 1.2em 1em 1.5em;
+    max-width: 500px;
   }
 
   .hamburger {
