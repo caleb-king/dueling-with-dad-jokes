@@ -9,28 +9,19 @@ More detailed instructions for how to play can be found on the [home page](https
 
 I am using the icanhazdadjoke.com API for my joke database to provide random jokes during gameplay. I am also using this API in my Find Jokes feature.
 
-## User Stories
+## Screenshots
 
-**As a newcomer to the web app:**
-* I can understand the rules of the game
-* I can watch a video of the game being played for entertainment as well as to ensure I understand the gameplay
+How to Play/Landing Page:
 
-**As a player of the game:**
-* I can receive random dad jokes to read to my opponent
-* I can update the score when I or my opponent laughs
-* I can check the score at any point during the game
-* I can to undo any updates to the score that were incorrect or accidental
-* I am informed when either me or my opponent has won
-* I can reset the game and play again
+![How to Play](Screenshots\how-to-play-screenshot.jpg)
 
-**As a visually impaired player:**
-* I too am able to play the game
+Gameplay:
 
-**As an admin of the website:**
-* I am not responsible for updating the jokes within joke database - it is managed for me
+![Gameplay](Screenshots/gameplay-screenshot.jpg)
 
-**As a user**
-* I can search the dad jokes database
+Find Jokes:
+
+![Find Jokes](Screenshots/find-jokes-screenshot.jpg)
 
 ## Technical Requirements
 
