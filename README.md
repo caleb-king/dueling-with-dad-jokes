@@ -13,7 +13,7 @@ I am using the icanhazdadjoke.com API for my joke database to provide random jok
 
 How to Play/Landing Page:
 
-![How to Play](Screenshots\how-to-play-screenshot.jpg)
+![How to Play](Screenshots/how-to-play-screenshot.jpg)
 
 Gameplay:
 
