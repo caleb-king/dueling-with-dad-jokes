@@ -89,6 +89,9 @@ const displayWinner = function() {
       <span role="img" aria-label="party popper">🎉</span>
     </h2>
     <p>You have won the game :)</p>
+    <div class="play-again-container">
+      <a href="game.html" class="play-again">Play Again!</a>
+    </div>
   `;
   $('.winner').html(winnerHTML);
   $('.winner').show();

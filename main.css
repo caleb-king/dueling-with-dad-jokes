@@ -71,7 +71,8 @@ nav a:visited {
   transition:all 0.25s ease;
 }
 
-.new-game-nav-link a, .new-game-nav-link a:visited {
+.new-game-nav-link a, 
+.new-game-nav-link a:visited {
   color: black;
   transition:all 0.25s ease;
 }
@@ -84,7 +85,8 @@ nav a:visited {
 .new-game-nav-link:active, 
 .new-joke-button:active, 
 .find-jokes-button:active,
-.begin-duel:active {
+.begin-duel:active,
+.play-again:active {
   background-color: black;
   color: #ffff00;
   border-color: #ffff00;
@@ -111,7 +113,9 @@ nav li:active,
 .find-jokes-button:focus, 
 .find-jokes-button:active,
 .begin-duel:focus,
-.begin-duel:active {
+.begin-duel:active,
+.play-again:focus,
+.play-again:active {
     outline: none;
 }
 
@@ -200,7 +204,11 @@ iframe:active {
   margin-bottom: 3em;
 }
 
-.begin-duel, .new-joke-button, .find-jokes-button {
+.play-again-container {
+  padding: 1em 2em 2em;
+}
+
+.begin-duel, .new-joke-button, .find-jokes-button, .play-again {
   padding: .5em 1em;
   background-color: #ffff00;
   border: solid 3px black;
@@ -282,7 +290,7 @@ iframe:active {
   margin: 0 auto;
 }
 
-.how-to-play, .joke-container, .score-container, .winner, .directions-container, .find-jokes, .begin-duel-section {
+.how-to-play, .joke-container, .score-container, .winner, .directions-container, .find-jokes, .begin-duel-section, .play-again-container {
   max-width: 1054px;
 }
 
@@ -509,7 +517,7 @@ iframe:active {
     visibility: visible;
   }
   
-  .new-joke-button, .begin-duel, .find-jokes-button {
+  .new-joke-button, .begin-duel, .find-jokes-button, .play-again {
     padding: 1em 2em;
     border-radius: 5px; 
     font-size: 20px;
@@ -542,7 +550,8 @@ iframe:active {
   .new-game-nav-link:hover, 
   .new-joke-button:hover, 
   .find-jokes-button:hover,
-  .begin-duel:hover {
+  .begin-duel:hover,
+  .play-again:hover {
     background-color: black;
     color: #ffff00;
     border-color: #ffff00;
